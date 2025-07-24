@@ -50,8 +50,19 @@
       border-radius: 5px;
     }
   </style>
-</head>
-<body>
+
+    <style>
+      .flashing {
+        background-color: yellow;
+        animation: flash 0.1s infinite;
+      }
+      @keyframes flash {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0; }
+      }
+    </style>
+    </head>
+<body><div class='flashing'>WARNING</div>
 
   <div class="nav">
     <a href="#">Home</a>
@@ -68,11 +79,25 @@
 
   <div class="form-container">
     <form action="finance-bad_dashboard.html">
-      <input type="text" placeholder="Username" required><br>
-      <input type="password" placeholder="Password" required><br>
+      <input aria-hidden="true" type="text" placeholder="Username" required><br>
+      <input aria-hidden="true" type="password" placeholder="Password" required><br>
       <button class="button">Login</button>
     </form>
   </div>
 
-</body>
+
+    <script>
+      // Trap focus inside the first input if exists
+      window.onload = function() {
+        var trap = document.querySelector('input');
+        if(trap) trap.focus();
+        document.addEventListener('keydown', function(e) {
+          if(e.key === 'Tab') {
+            e.preventDefault();
+            trap.focus();
+          }
+        });
+      };
+    </script>
+    </body>
 </html>
