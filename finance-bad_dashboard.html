@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Non-Compliant Financial Dashboard</title>
+  <style>
+    body {
+      background-color: #ffffff;
+      color: #000000;
+      font-family: Arial, sans-serif;
+    }
+    .menu {
+      background: #333333;
+      padding: 10px;
+    }
+    .menu a {
+      color: #ffffff;
+      margin-right: 15px;
+      text-decoration: none;
+    }
+    .card {
+      background: #eeeeee;
+      margin: 20px;
+      padding: 20px;
+    }
+    .red-text {
+      color: red;
+    }
+    .hidden-audio {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="menu">
+    <a href="#">Home</a>
+    <a href="#">Reports</a>
+    <a href="#">Settings</a>
+  </div>
+
+  <div class="card">
+    <img src="chart.png">
+    <p class="red-text">Click the red button to proceed</p>
+    <button>Submit</button>
+  </div>
+
+  <div class="card">
+    <p>Total Revenue: <span style="color: green;">$150,000</span></p>
+    <p>Expenses: <span style="color: red;">$50,000</span></p>
+  </div>
+
+  <audio autoplay>
+    <source src="alert.mp3" type="audio/mpeg">
+  </audio>
+</body>
+</html>

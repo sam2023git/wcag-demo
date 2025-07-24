@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accessible Financial Dashboard</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      color: #333;
+    }
+    a.skip-link {
+      position: absolute;
+      left: -999px;
+      top: auto;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+    }
+    a.skip-link:focus {
+      left: 0;
+      top: 0;
+      width: auto;
+      height: auto;
+      padding: 1em;
+      background: #000;
+      color: #fff;
+      z-index: 1000;
+    }
+    header, nav, main {
+      padding: 1em;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1em;
+      padding: 0;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: #0077cc;
+    }
+    .card {
+      background: #fff;
+      padding: 1em;
+      margin-bottom: 1em;
+      border-radius: 0.5em;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    button {
+      background: #007bff;
+      color: #fff;
+      border: none;
+      padding: 0.5em 1em;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:focus {
+      outline: 2px solid #000;
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header>
+    <h1>Finance Dashboard</h1>
+    <nav>
+      <ul>
+        <li><a href="#dashboard">Dashboard</a></li>
+        <li><a href="#reports">Reports</a></li>
+        <li><a href="#settings">Settings</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section class="card" id="dashboard">
+      <h2>Dashboard Overview</h2>
+      <img src="chart.png" alt="Bar chart showing monthly financial data">
+      <p>Total Revenue: $150,000</p>
+      <p>Expenses: $50,000</p>
+      <button aria-label="View more details about the dashboard">View Dashboard Details</button>
+    </section>
+
+    <section class="card" id="reports">
+      <h2>Reports</h2>
+      <p>Download quarterly and annual financial reports.</p>
+      <button aria-label="Download financial reports">Download Reports</button>
+    </section>
+
+    <section class="card" id="settings">
+      <h2>Settings</h2>
+      <p>Manage your profile and account settings.</p>
+      <button aria-label="Edit profile and settings">Edit Settings</button>
+    </section>
+
+    <audio controls>
+      <source src="alert.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+  </main>
+</body>
+</html>
