@@ -1,0 +1,111 @@
+<!-- finance-good.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Eve's Finance (Accessible)</title>
+  <link rel="icon" href="logo.png" type="image/png">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #f5f7fa, #c3cfe2);
+      color: #000;
+    }
+    a.skip-link {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      background: #000;
+      color: #fff;
+      padding: 8px;
+      z-index: 100;
+    }
+    a.skip-link:focus {
+      top: 0;
+    }
+    nav {
+      background-color: #095aaa;
+      padding: 5px;
+      text-align: center;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 18px;
+    }
+    .hero {
+      text-align: center;
+      padding: 50px 20px;
+    }
+    .hero h1 {
+      font-size: 3em;
+    }
+    .hero p {
+      font-size: 1.5em;
+    }
+    .hero img {
+      width: 200px;
+      margin-top: 20px;
+    }
+    .form-container {
+      text-align: center;
+      padding: 10px;
+    }
+    label {
+      display: block;
+      margin: 10px auto 5px;
+      font-weight: bold;
+    }
+    input {
+      padding: 10px;
+      width: 250px;
+      border: 1px solid #333;
+      border-radius: 5px;
+      margin-bottom: 15px;
+    }
+    .button {
+      background-color: #28a745;
+      color: #fff;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .button:focus, input:focus {
+      outline: 3px solid #000;
+    }
+  </style>
+</head>
+<body>
+
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <nav role="navigation">
+    <a href="#">Home</a>
+    <a href="#">Accounts</a>
+    <a href="#">Loans</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <main id="main" class="hero">
+    <h1>Welcome to XYZ Finance</h1>
+    <p>Your trusted partner in financial success</p>
+    <img src="finance-chart.jpg" alt="Line chart showing steady financial growth">
+  </main>
+
+  <div class="form-container">
+    <form action="#" aria-label="Login form">
+      <label for="username">Username</label>
+      <input type="text" id="username" name="username">
+
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password"><br>
+
+      <button class="button" type="submit">Login</button>
+    </form>
+  </div>
+
+</body>
+</html>
